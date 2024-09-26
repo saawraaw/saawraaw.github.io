@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-# subtitle: Postdoctoral Researcher, KTH Royal Institute of Technology 
+# subtitle: Postdoctoral Researcher, KTH Royal Institute of Technology
 
 profile:
   align: right
