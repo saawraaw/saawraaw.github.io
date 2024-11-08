@@ -2,7 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
-nav: false
+nav: true
 nav_order: 1
 pagination:
   enabled: true
@@ -116,9 +116,11 @@ pagination:
     {% else %}
       {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
     {% endif %}
+
     {% assign year = post.date | date: "%Y" %}
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
+
 
     <li>
 
@@ -147,7 +149,7 @@ pagination:
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}
       </p>
-      <p class="post-tags">
+      <!-- <p class="post-tags">
         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
           <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
 
@@ -172,7 +174,7 @@ pagination:
               {% endunless %}
               {% endfor %}
           {% endif %}
-    </p>
+    </p> -->
 
 {% if post.thumbnail %}
 
